@@ -1,0 +1,196 @@
+
+        /* Main Content Styles */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: calc(100vh - 200px);
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .page-title h1 {
+            font-size: 1.5rem;
+            color: var(--gold);
+            display: inline-block;
+        }
+        
+        .page-title h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        .content-section {
+            background: var(--charcoal);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .content-section h2 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .content-section p {
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 350px;
+            gap: 2rem;
+            margin-top: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            /* gap: 1rem; */
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            /* gap: .4rem; */
+        }
+        
+        .contact-icon {
+            color: var(--gold);
+            font-size: 1.5rem;
+            width: 30px;
+        }
+        
+        .contact-details h3 {
+            color: var(--light-gold);
+            /* margin-bottom: 10px; */
+            font-size: 15px;
+        }
+
+        .contact-details > p {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        .social-media {
+            margin-top: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: var(--dark-gray);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        .social-links > a > img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--primary-black);
+            transform: translateY(-3px);
+        }
+        
+        /* Form Styles */
+        .contact-form {
+            height: 100%;
+            display: grid;
+            grid-template-rows: auto auto auto auto auto;
+            gap: .5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 0.5rem;
+            color: var(--light-gold);
+            font-weight: 500;
+        }
+        .form-group > input {
+            height: 30px;
+        }
+
+        .form-group > textarea {
+            height: 70px;
+        }
+        .form-group input,
+        .form-group textarea {
+            padding: 0.4rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 4px;
+            background: var(--dark-gray);
+            color: var(--off-white);
+            font-size: 12px;
+        }
+
+        .form-group > label {
+            font-size: 13px;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--rich-gold) 100%);
+            color: var(--primary-black);
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            justify-self: start;
+            margin-top: .2rem;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+        }
+
+/* 
+    END OF STYLES
+    DEVELOPER: ISAAC SAYEH
+    email: callmeisacc@gmail.com
+    contact: 0555-555-44/0775-808-940
+*/
+

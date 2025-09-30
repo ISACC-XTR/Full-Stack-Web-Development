@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPRC OILERS FC | Home</title>
+    <link rel="stylesheet" href="./resources/Styles_Sheets/generalStyles.css">
+    <link rel="stylesheet" href="./resources/Styles_Sheets/home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="resources/images/lprc_oiler.jpg" alt="Team Logo">
+                </div>
+                <div class="logo-text">LPRC OILERS FC</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="page-title">
+            <h1>WELCOME TO LPRC OILERS FC</h1>
+        </div>
+        
+        <section class="content-section">
+            <h2>Liberia's Premier Football Team</h2>
+            <p>Founded in the late 1980, LPRC OILERS FC has established itself as one of Liberia's most successful football clubs. With a rich history of championships and a commitment to developing local talent, we continue to represent excellence both on and off the field.</p>
+            <p>Our home stadium, Oilers Arena in Monrovia, hosts thousands of passionate fans each season who come to support our black and gold warriors.</p>
+            
+            <div class="team-highlights">
+                <div class="highlight-card">
+                    <img src="resources/images/lprc_oiler.jpg" alt="logo">
+                    <h3>7 Championships</h3>
+                    <p>Liberian Premier League Titles</p>
+                </div>
+                <div class="highlight-card">
+                    <img src="resources/images/lprc_oiler.jpg" alt="logo">
+                    <h3>25+ Players</h3>
+                    <p>Developed for National Team</p>
+                </div>
+                <div class="highlight-card">
+                    <img src="resources/images/lprc_oiler.jpg" alt="logo">
+                    <h3>3 MVP Awards</h3>
+                    <p>In the Last 5 Seasons</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <h2>Team Highlights</h2>
+            <p>Watch our recent match highlights and get a glimpse of the The Oil Boys in action.</p>
+            
+            <div class="video-container">
+                <!-- TEAM HIGHLIGHTS -->
+                <!-- <iframe width="100%" height="100%" src="resources/videos/team_highlights.mp4" frameborder="0" allowfullscreen></iframe> -->
+                <video src="resources/videos/team_highlights.mp4" class="video-player" id="teamVideo" controls controlsList="nodownload" width="100%" height="100%">
+                </video>
+            </div>
+            
+            <p>Video: LPRC OILERS FC vs. Monrovia FC - Liberian First Division League 2023</p>
+        </section>
+        
+        <section class="content-section">
+            <h2>Team Anthem</h2>
+            <p>Listen to our official team anthem, "Oilers of Glory," performed by local Liberian artists.</p>
+            
+            <div class="audio-player">
+                <h3>LPRC OILERS FC - Team Anthem</h3>
+                <audio controls>
+                    <source src="resources/audios/team_anthem.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <h2>Team Gallery</h2>
+            <p>Take a look at our team in action, our stadium, and memorable moments from our history.</p>
+            
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <!-- TEAM PHOTO -->
+                    <img src="resources/images/lprc_oiler.jpg" alt="Royal Knights Team Photo">
+                </div>
+                <div class="gallery-item">
+                    <!-- TEAM STADIUM -->
+                    <img src="resources/images/img.jpg" alt="Knights Arena Stadium">
+                </div>
+                <div class="gallery-item">
+                    <!-- TEAM CHAMPIONSHIP CELEBRATION -->
+                    <img src="resources/images/img.jpg" alt="Championship Celebration">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2023 LPRC OILERS FC. All rights reserved. | Founded in 1980 &amp; based in Monrovia, Liberia</p>
+        </div>
+    </footer>
+
+    <script>
+// Video auto-pause functionality
+function initVideoScrollPause() {
+    const videoContainer = document.querySelector('.video-container');
+    const video = document.getElementById('teamVideo');
+    
+    if (!videoContainer || !video) return;
+    
+    let isPausedByScroll = false;
+    
+    // Function to check if video container is 50% scrolled through
+    function checkScroll() {
+        const containerRect = videoContainer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Calculate how much of the container is visible
+        const containerTop = containerRect.top;
+        const containerBottom = containerRect.bottom;
+        const containerHeight = containerRect.height;
+        
+        // Check if less than 50% of the container is visible
+        const visibleHeight = Math.min(containerBottom, windowHeight) - Math.max(containerTop, 0);
+        const isHalfVisible = visibleHeight < (containerHeight * 0.5);
+        
+        if (isHalfVisible && !video.paused && !isPausedByScroll) {
+            video.pause();
+            isPausedByScroll = true;
+        } else if (!isHalfVisible && video.paused && isPausedByScroll) {
+            video.play().catch(e => console.log('Auto-play prevented by browser'));
+            isPausedByScroll = false;
+        }
+    }
+    
+    // Throttle scroll events for better performance
+    let scrollTimeout;
+    function throttledScroll() {
+        if (!scrollTimeout) {
+            scrollTimeout = setTimeout(() => {
+                checkScroll();
+                scrollTimeout = null;
+            }, 100);
+        }
+    }
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', throttledScroll);
+    
+    // Also check on page load and resize
+    window.addEventListener('load', checkScroll);
+    window.addEventListener('resize', throttledScroll);
+    
+    // Initial check
+    checkScroll();
+}
+
+// Media synchronization functionality
+function initMediaSync() {
+    const video = document.getElementById('teamVideo');
+    const audio = document.querySelector('audio');
+    
+    if (!video || !audio) return;
+    
+    // Function to pause other media when one starts playing
+    function handleMediaPlay(event) {
+        const playingMedia = event.target;
+        
+        if (playingMedia === video && !audio.paused) {
+            audio.pause();
+            console.log('Paused audio because video started playing');
+        } else if (playingMedia === audio && !video.paused) {
+            video.pause();
+            console.log('Paused video because audio started playing');
+        }
+    }
+    
+    // Function to handle when media is paused by user
+    function handleMediaPause(event) {
+        // Optional: Add any specific behavior when media is paused
+    }
+    
+    // Add event listeners to both media elements
+    video.addEventListener('play', handleMediaPlay);
+    audio.addEventListener('play', handleMediaPlay);
+    
+    video.addEventListener('pause', handleMediaPause);
+    audio.addEventListener('pause', handleMediaPause);
+    
+    // Also handle when media ends
+    video.addEventListener('ended', () => {
+        console.log('Video ended');
+    });
+    
+    audio.addEventListener('ended', () => {
+        console.log('Audio ended');
+    });
+}
+
+// Initialize all functionality when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    initVideoScrollPause();
+    initMediaSync();
+});
+</script>
+</body>
+</html>
