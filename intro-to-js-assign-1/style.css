@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: tahoma;
+}
+
+body {
+    background: #0e363b;
+    color: #fff;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+}
+
+div.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #fff;
+}
+
+div.instruction {
+    margin: 25px 0;
+    width: fit-content;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    place-self: center;
+}
+
+div.instruction h5 {
+    color: #0e363b;
+}
+
+div.flex {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+div.logical-statement {
+    width: fit-content;
+    border-radius: 20px;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    place-self: center;
+    align-items: center;
+    box-shadow: 0 0 15px #ffffff9a;
+    ;
+}
+
+.second {
+    margin-top: 40px;
+    width: 400px:
+}
+
+div.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+    width: 600px;
+}
+
+div.redesign {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+input {
+    text-align: center;
+    outline: none;
+    height: 40px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+input.numberField {
+    width: 100px;
+}
+
+button {
+    background: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    color: #0e363b;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+button:hover {
+    background: #0e363b;
+    color: #fff;
+    box-shadow: 0 0 5px #fff;
+    ;
+}
+
+
+button:active {
+    background-color: #ad0303;
+    color: #fff;
+    box-shadow: 0 0 5px #fff;
+    ;
+}
+
+.seeResult {
+    height: 40px;
+    width: 100px;
+    margin-left: 10px;
+    font-weight: bolder;
+}

@@ -172,3 +172,74 @@ let even = 2;
 
 //  const average = sum/integers.length;
 //  console.log(average)
+
+
+// 4. Function
+// Functions are reusable blocks of code that perform specific tasks.
+// 1. Function Declaration
+
+function greet() {
+    console.log("Hello world!");
+}
+
+// Calling the function
+greet();        // "Hello world!"
+greet();        // "Hello world!" (reusable)
+
+// Function with Parameters
+// Parameters are the variable listed in the function definition. The act as placeholders for the actual values passed to the function.
+
+function greet(name){
+    console.log("Hello, " + name);
+}
+
+greet("Isaac");
+greet("Jallah");
+
+// Multiple parameters
+function introduce(name, age, city){
+    console.log(`Hi, I am ${name}, age: ${age}, from ${city}.`);
+}
+
+introduce("Isaac",23, "Rock Hill Community");
+
+// Function with Return values
+
+function add(a, b){
+    return a + b;
+}
+
+let result = add(5, 3);
+console.log(result);
+
+result = add(1, 2);
+console.log(result);
+
+
+// EXERCISE
+// 1. Create a function that calculate the area of a rectangle
+function areaOfRectangle(base, height){
+    return base * height;
+}
+
+result = areaOfRectangle(10, 20);
+console.log(`${result}. This is obtained by multiplying The rectangle base by the height`);
+
+// 2. A function to check if a number is EVEN.
+function isEven(evenNumber){
+    return evenNumber % 2 === 0;
+}
+result = isEven(90);
+console.log(result)
+
+function display() {
+    if(result){
+    console.log("Correct!");
+} else{
+    console.log("Wrong!");
+}
+}
+
+display();
+
+let sString = `can this work`;

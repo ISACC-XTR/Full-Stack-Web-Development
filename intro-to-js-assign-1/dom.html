@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PROBLEM SET | ISAAC SAYEH</title>
+
+
+    <style>
+        #box {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            height: 50px;
+            background: black;
+            color: #fff; 
+            font: bolder 18px tahoma;
+        }
+        #parent {
+            background: #000                                                                                                                ;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hi! Isaac again</h1>
+    <h5>
+        Another task!
+    </h5>
+    <p>
+        Here I will be will be using JavaScipt to manipulate the HTML document.
+    </p>
+
+    <p id="changeThisText">Hello world! Click the button below to change this text.</p>
+
+    <button id="clickToChange">Click To Change The Text!</button>
+    <br><br><br><br>
+    <div id="box">BOX</div>
+    <br>
+    <input type="text" id="colorInput">
+    <button id="changeBoxColor">Change The Box Color</button>
+    <br><br><br><br>
+
+    <h4>Click the button below to add a new &lt;li&gt; element</h4>
+    <ul id="parent">
+        <li>List One</li>
+        <li>List Two</li>
+    </ul>
+    <br>
+    <button id="clickToAddNewList">Click Me!</button>
+    <br><br><br><br>
+
+    <h4>Click the button below to remove a &lt;li&gt; element</h4>
+    <ul id="parent2">
+        <li>List One</li>
+        <li>List Two</li>
+        <li>List Three</li>
+        <li>List Four</li>
+        <li>List Five</li>
+    </ul>
+    <button id="removeButton">Click Me!</button>
+    <br><br><br>
+
+    <h4>Enter a text in the input field to display in the &lt;p&gt; tag</h4>
+    <input type="text" id="userInput" placeholder="Enter your text" autocomplete="off">
+    <input type="button" value="Click To Add Text" id="sendText">
+    <br>
+    <p id="changeMe">waitin...!</p>
+    <br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+    <script src="dom.js"></script>
+</body>
+
+</html>
